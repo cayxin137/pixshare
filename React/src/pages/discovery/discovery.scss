@@ -1,0 +1,69 @@
+.discovery_title{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.small_post_container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    .small_post_item{
+        width: 30%;
+        margin-bottom: 30px;
+        .small_post_image{
+            cursor: pointer;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+        .small_post_info{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .small_post_user{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 14px;
+                .user_image_container{
+                    cursor: pointer;
+                    margin-right: 8px;
+                    width: 35px;
+                    height: 35px;
+                    // background: red;
+                    padding: 2px;
+                    border-radius: 50%;
+                    background: linear-gradient(to bottom right, #F66064, #7A59F1);
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+                
+                
+            }
+            .interact_container{
+                display: flex;
+                font-size: 14px;
+                font-weight: 500;
+                .interact_item{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 16px;
+                    svg{
+                        font-size: 20px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

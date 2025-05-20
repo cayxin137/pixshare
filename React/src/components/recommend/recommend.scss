@@ -1,0 +1,47 @@
+.title{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    svg{
+        font-size: 28px;
+        margin-right: 12px;
+    }
+}
+
+.recommend_item{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .recommend_content{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 12px;
+            object-fit: cover;
+        }
+        .recommend_info{
+            display: flex;
+            flex-direction: column;
+            .user_name{
+                font-weight: 800;
+            }
+            .recommend_by{
+                font-size: 12px;
+            }
+        }
+    }
+    .follow_button{
+        margin-right: 40px;
+        font-weight: 700;
+        color: #E7366B;
+        cursor: pointer;
+    }
+}

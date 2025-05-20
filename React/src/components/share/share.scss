@@ -1,0 +1,151 @@
+.share_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    color: black;
+    background-color: transparent;
+    z-index: 20000;
+    .share_content{
+        position: absolute;
+        text-align: center;
+        border-radius: 16px;
+        width: 30%;
+        height: 70vh;
+        background-color: white;
+        .share_content_header{
+            font-weight: 700;
+            font-size: 18px;
+            width: 100%;
+            border-bottom: 1px solid rgb(187, 187, 187);
+            padding: 12px 0;
+            svg{
+                cursor: pointer;
+                font-size: 20px;
+                position: absolute;
+                float: right;
+                right: 12px;
+            }
+        }
+        .share_search_container{
+            padding: 0 12px;
+            height: 40px;
+            width: calc(100% - 24px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgb(187, 187, 187);
+            span{
+                font-weight: 600;
+            }
+            input{
+                outline: none;
+                font-family: 'Montserrat';
+                border: none;
+                height: 24px;
+                width: 90%;
+            }
+        }
+        .share_list{
+            height: calc(100% - 158px);
+            width: 100%;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid rgb(187, 187, 187);
+            .share_item{
+                cursor: pointer;
+                position: relative;
+                padding: 12px 24px;
+                width: calc(100% - 48px);
+                display: flex;
+                align-items: center;
+                column-gap: 16px;
+                img{
+                    object-fit: cover;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: 1px solid rgb(218, 218, 218);
+                }
+                .share_info{         
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    font-size: 16px;
+                    .share_info1{
+                        color: black;
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
+                    .share_info2{
+                        font-weight: 500;
+                        color: gray;
+                    }
+                }
+                .follow_button{
+                    cursor: pointer;
+                    font-size: 14px;
+                    right: 0;
+                    position: absolute;
+                    width: fit-content;
+                    padding: 8px 16px;
+                    border-radius: 12px;
+                    background-color:#E7366B ;
+                    color: white;
+                }
+            }
+            .share_item:hover{
+                background-color: rgb(238, 238, 238);
+                opacity: 0.8;
+               
+            }
+            .active{
+                background-color:#E7366B ;
+                .share_info{
+                    .share_info1{
+                        color: white;
+                    }
+                    .share_info2{
+                        color: white;
+                    }
+                  
+                }
+            }
+            .active:hover{
+                background-color:#E7366B ;
+                .share_info{
+                    span{
+                        color: white;
+                    }
+                  
+                }
+            }
+        }
+    }
+    .share_button_container{
+        width: 100%;
+        height: 70px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            border: none;
+            font-weight: 700;
+            color: white;
+            border-radius: 12px;
+            width: 90%;
+            background-color: #E7366B;
+            padding: 12px 12px;
+        }
+        button:hover{
+            opacity: 0.7;
+        }
+    }
+}

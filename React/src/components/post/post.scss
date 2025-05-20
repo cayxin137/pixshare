@@ -1,0 +1,247 @@
+
+.post_detail_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.801); 
+    color: black;
+    img{
+        object-fit: cover;
+    }
+    #post_exit_button{
+        cursor: pointer;
+        z-index: 30000;
+        position: absolute;
+        color: white;
+        right: 60px;
+        top: 30px;
+        font-size: 30px;
+    }
+    .post_detail{
+        scale: 1.2;
+        transition: scale 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
+        position: relative;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 36px;
+        width: 70%;
+        height: 80vh;
+        background-color: white;
+        display: flex;
+        .post_detail_image{
+            border-top-left-radius: 36px;
+            border-bottom-left-radius: 36px;
+            width: 60%;
+            background-color: gray;
+        }
+        .post_detail_content{
+            height: 100%;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            .post_detail_header_container{
+                position: fixed;
+                width: 40%;
+                .post_detail_header{
+                    position: relative;
+                    padding: 0 30px;
+                    height: 75px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #BDBDBD;
+                    .post_detail_header_info{
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color: black;
+                    }
+                    .post_user_avatar{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: gray;
+                        margin-right: 12px;
+                        border: 1px solid gray;
+                    }
+                    svg{
+                        position: absolute;
+                        right: 30px;
+                        font-size: 24px;
+                    }
+                  
+                }
+            }
+            .post_comment_item_container::-webkit-scrollbar{
+                display: none;
+            }
+            
+            .post_comment_item_container{
+                height: calc(100% - 240px);
+                overflow-y: scroll;
+                scrollbar-width: none; 
+                -ms-overflow-style: none; 
+                padding: 0 30px;
+                margin-top: 85px;
+                display: flex;
+                flex-direction: column;
+                .post_comment_item{
+                    padding: 16px 0;
+                    display: flex;
+                    font-size: 14px;
+                    img{
+                        border-radius: 50%;
+                        background-color: gray;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid gray;
+                        margin-right: 12px;
+                    
+                    }
+                    .post_comment_item_content{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: calc(100% - 52px);
+                        .post_comment_caption_container{
+                            text-align: left;
+                            margin-top: 4px;
+                            display: inline-block;
+                            max-width: 100%;
+                            word-wrap: break-word;
+                            .post_comment_username{
+                                margin-right: 4px;
+                                text-decoration: none;
+                                color: black;
+                                font-weight: 700;
+                            }
+                            .post_comment_caption{
+                                font-weight: 500;
+                            }
+                        }
+                        .post_comment_hour{
+                            margin-top: 4px;
+                            font-weight: 500;
+                            color: gray;
+                            font-size: 14px;
+                        }
+                    }
+                   
+                }
+            }
+            .post_detail_footer{
+                z-index: 10000;
+                background-color: none;
+                width: 40%;
+                position: fixed;
+                bottom: 0%;
+                .post_detail_footer_content{
+                    .interact_container{
+                        width: calc(100% - 60px) ;
+                        border-top: 1px solid rgb(236, 236, 236) ;
+                        border-bottom: 1px solid rgb(212, 212, 212) ;
+                        padding: 16px 30px;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        font-size: 14px;
+                        .interact_content{
+                            width: 100%;
+                            display: flex;
+                            .interact_item:hover{
+                                opacity: 0.5;
+                            }
+                            .interact_item{
+                            
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                                display: flex;
+                                align-items: center;
+                                margin-right: 12px;
+                    
+                                svg{
+                                    font-size: 24px;
+                                    margin-right: 10px;
+                                }
+                            }
+                    
+                            .mark{
+                                position: absolute;
+                                right: 20px;
+                                margin: 0;
+                            }
+                    
+                            #liked{
+                                margin-right: 11px;
+                                font-weight: 600;
+                                color: red;
+                                user-select: none
+                            }
+                    
+                            #unliked{
+                                color: black;
+                                user-select: none
+                            }
+                        }
+                        .like_count{
+                            margin-top: 12px;
+                            font-weight: 600;
+                        }
+                        .post_comment_hour{
+                            margin-top: 4px;
+                            font-weight: 500;
+                            color: gray;
+                            font-size: 14px;
+                        }
+                    }
+                    .comment_input{
+                        bottom: 0;
+                        width: calc(100% - 60px) ;
+                        height: 50px;
+                        padding:0 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        input{
+                            height: 40px;
+                            width: 90%;
+                            border: none;
+                        }
+                        input:focus{
+                            outline: none;
+                        }
+                        .send_comment{
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 20px;
+                            color: #E7366B;
+                            cursor: pointer;
+                        }
+                
+                        .send_comment:hover{
+                            color: #e782a0;
+                        }
+                    }
+                }
+            }
+          
+           
+        }
+    }
+    .loaded{
+        scale: 1;
+        opacity: 1;
+        transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+}

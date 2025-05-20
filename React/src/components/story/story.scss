@@ -1,0 +1,36 @@
+@media only screen and (min-width: 1400px) {
+    .story_item_container{
+        .story_item{
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .story_item_container{
+        .story_item{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.story{
+    .story_item_container{
+        display: flex;
+        justify-content: center;
+
+        cursor: pointer;
+        background-image: linear-gradient(to bottom right, #F66064, #7A59F1);
+        border-radius: 50%;
+        padding: 3px;
+        .story_item{
+            object-fit: cover;
+            background-color: gray;
+            border-radius: 50%;
+        }
+    }
+    
+}
+
